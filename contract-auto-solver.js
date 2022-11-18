@@ -48,7 +48,7 @@ export function main(ns) {
     //ns.disableLog("ALL")
     // ns.tail();
     // var MoneyStop = 25000000000;
-    // while (true) {//OG-Added
+    // while (true) {//MG-Added
         const contracts = getAllServers(ns).flatMap((server) => {
             const onServer = ns.ls(server, ".cct").map((contract) => {
                 const type = ns.codingcontract.getContractType(contract, server);
@@ -63,8 +63,8 @@ export function main(ns) {
         ns.tprint(`INFO: Found ${contracts.length} contracts`);
         contracts.forEach((contract) => void ns.tprint(contract));
 
-    //     await ns.sleep(600000);//OG-Added
-    // };//OG-Added
+    //     await ns.sleep(600000);//MG-Added
+    // };//MG-Added
 }
 
 // return list of all servers, not belonging to player
